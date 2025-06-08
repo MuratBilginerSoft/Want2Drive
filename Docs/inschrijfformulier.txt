@@ -1,0 +1,34 @@
+Inschrijfformulier Want2Drive
+
+Persoonlijke gegevens:
+Naam: ___________________________
+Adres: ___________________________
+Postcode: ___________________________
+Woonplaats: ___________________________
+Geboortedatum: ___________________________
+Telefoonnummer: ___________________________
+E-mail: ___________________________
+
+Rijbewijscategorie:
+[ ] B (personenauto)
+[ ] AM (bromfiets/scooter)
+[ ] A (motor)
+
+Pakketkeuze:
+[ ] Proefles
+[ ] Losse les
+[ ] Pakket 10
+[ ] Pakket 20
+[ ] Pakket 30
+[ ] Snelcursus
+[ ] Opfriscursus
+
+Bijzonderheden:
+___________________________
+___________________________
+___________________________
+
+Datum: ___________________________
+Handtekening: ___________________________
+
+Door ondertekening van dit formulier ga je akkoord met de algemene voorwaarden van Rijschool Want2Drive.

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inschrijving en Prijzen - Want2Drive</title>
+    <link rel="stylesheet" href="../Assets/Css/MainStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .download-btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            margin: 1rem;
+        }
+        
+        .download-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+        
+        .price-table th, .price-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .price-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .price-table tr:hover {
+            background-color: var(--bg-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <a href="../index.html" class="logo">Want2Drive</a>
+            <button id="mobileMenuBtn" class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="Rijvanaf.html" class="nav-link">Rijles vanaf 16,5</a></li>
+                <li class="nav-item"><a href="Prijs.html" class="nav-link">Inschrijving en Prijzen</a></li>
+                <li class="nav-item"><a href="Rijschool.html" class="nav-link">Rijschoolmachtiging</a></li>
+                <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <button id="themeToggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero prijs-hero">
+        <div class="container hero-content">
+            <h1>Inschrijving en Prijzen</h1>
+            <p>Bekijk onze pakketten en prijzen</p>
+        </div>
+    </section>
+
+    <!-- Inschrijving Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Inschrijving</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Om te kunnen lessen bij ieder willekeurige rijschool is een inschrijving nodig. Daar is Want2drive geen uitzondering van. Daarom maakt Want2drive het mogelijk voor haar leerlingen om de inschrijfformulier te kunnen downloaden.</p>
+                    <p>Bij ondertekening van het inschrijfformulier ga je akkoord met de algemene voorwaarden van Rijschool Want2drive. Lees deze goed door bij inschrijving zodat je niet voor verassingen komt te staan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Downloads</h2>
+            <div style="text-align: center;">
+                <a href="../Docs/inschrijfformulier.txt" class="download-btn" download><i class="fas fa-file-download"></i> Inschrijfformulier</a>
+                <a href="../Docs/algemene_voorwaarden.txt" class="download-btn" download><i class="fas fa-file-download"></i> Algemene Voorwaarden</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prijzen Section -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">Prijzen & Pakketten</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>De pakketprijs kan in maximaal drie termijnen betaald worden. Er kan dus iedere maand 1 termijn afgelost worden. Uiteraard kunnen de lessen ook individueel worden genomen. De prijs per les van 50 minuten bedraagt 52,00 euro, met uitzondering van de eerste les. Deze is een proefles en kost dus slechts 30 euro.</p>
+                    <p>U kunt bij onze rijschool ook snelcursussen of opfriscursussen nemen. Deze worden besproken en speciaal op maat opgesteld. Voor meer informatie kunt u altijd bellen of mailen.</p>
+                </div>
+            </div>
+            
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Pakket</th>
+                        <th>Omschrijving</th>
+                        <th>Prijs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Proefles</td>
+                        <td>Kennismakingsles van 50 minuten</td>
+                        <td>€15,-</td>
+                    </tr>
+                    <tr>
+                        <td>Losse les</td>
+                        <td>Les van 50 minuten</td>
+                        <td>€52,-</td>
+                    </tr>
+                    <tr>
+                        <td>Pakket 10</td>
+                        <td>10 lessen van 50 minuten</td>
+                        <td>€500,-</td>
+                    </tr>
+                    <tr>
+                        <td>Pakket 20</td>
+                        <td>20 lessen van 50 minuten</td>
+                        <td>€950,-</td>
+                    </tr>
+                    <tr>
+                        <td>Pakket 30</td>
+                        <td>30 lessen van 50 minuten</td>
+                        <td>€1400,-</td>
+                    </tr>
+                    <tr>
+                        <td>Snelcursus</td>
+                        <td>Op maat gemaakt</td>
+                        <td>Op aanvraag</td>
+                    </tr>
+                    <tr>
+                        <td>Opfriscursus</td>
+                        <td>Op maat gemaakt</td>
+                        <td>Op aanvraag</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="contact" style="padding: 2rem 0;">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Klaar om te beginnen?</h2>
+            <p>Neem contact met ons op voor meer informatie of om je aan te melden!</p>
+            <a href="Contact.html" class="btn" style="margin-top: 1rem;">Contact opnemen</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>Want2drive</h3>
+                <p>Jonge rijschool gevestigd in Helmond</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigatie</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="Rijvanaf.html">Rijles vanaf 16,5</a></li>
+                    <li><a href="Prijs.html">Inschrijving en Prijzen</a></li>
+                    <li><a href="Rijschool.html">Rijschoolmachtiging</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Waarom Want2drive?</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Jong</a></li>
+                    <li><a href="#">Betrouwbaar</a></li>
+                    <li><a href="#">Op Maat</a></li>
+                    <li><a href="#">Doelgericht</a></li>
+                    <li><a href="#">Efficiënt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Volg ons op</h3>
+                <div class="social-links">
+                    <a href="http://www.facebook.com/autorijschoolwant2drive" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/0681470255" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 Want2drive - Alle rechten voorbehouden</p>
+        </div>
+    </footer>
+
+    <script src="../Assets/Js/MainScript.js"></script>
+</body>
+</html>

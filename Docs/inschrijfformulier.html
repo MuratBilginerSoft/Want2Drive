@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inschrijfformulier - Want2Drive</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3B82F6;
+            padding-bottom: 20px;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3B82F6;
+        }
+        h1 {
+            color: #3B82F6;
+            margin-top: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        .checkbox-group {
+            margin: 15px 0;
+        }
+        .checkbox-item {
+            margin-bottom: 8px;
+        }
+        .signature-area {
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        .signature-line {
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            width: 200px;
+            height: 20px;
+            margin-left: 10px;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Want2Drive</div>
+        <p>Jonge rijschool gevestigd in Helmond</p>
+    </div>
+
+    <h1>Inschrijfformulier</h1>
+    
+    <div class="form-group">
+        <h2>Persoonlijke gegevens</h2>
+        <div class="form-row">
+            <label for="naam">Naam:</label>
+            <div class="input-field"></div>
+        </div>
+        <div class="form-row">
+            <label for="adres">Adres:</label>
+            <div class="input-field"></div>
+        </div>
+        <div class="form-row">
+            <label for="postcode">Postcode:</label>
+            <div class="input-field"></div>
+        </div>
+        <div class="form-row">
+            <label for="woonplaats">Woonplaats:</label>
+            <div class="input-field"></div>
+        </div>
+        <div class="form-row">
+            <label for="geboortedatum">Geboortedatum:</label>
+            <div class="input-field"></div>
+        </div>
+        <div class="form-row">
+            <label for="telefoonnummer">Telefoonnummer:</label>
+            <div class="input-field"></div>
+        </div>
+        <div class="form-row">
+            <label for="email">E-mail:</label>
+            <div class="input-field"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h2>Rijbewijscategorie</h2>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="cat-b" name="categorie">
+                <label for="cat-b">B (personenauto)</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="cat-am" name="categorie">
+                <label for="cat-am">AM (bromfiets/scooter)</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="cat-a" name="categorie">
+                <label for="cat-a">A (motor)</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h2>Pakketkeuze</h2>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="proefles" name="pakket">
+                <label for="proefles">Proefles</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="losse-les" name="pakket">
+                <label for="losse-les">Losse les</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pakket-10" name="pakket">
+                <label for="pakket-10">Pakket 10</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pakket-20" name="pakket">
+                <label for="pakket-20">Pakket 20</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="pakket-30" name="pakket">
+                <label for="pakket-30">Pakket 30</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="snelcursus" name="pakket">
+                <label for="snelcursus">Snelcursus</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="opfriscursus" name="pakket">
+                <label for="opfriscursus">Opfriscursus</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h2>Bijzonderheden</h2>
+        <textarea class="input-field" rows="4"></textarea>
+    </div>
+
+    <div class="signature-area">
+        <div class="form-row">
+            <label for="datum">Datum:</label>
+            <span class="signature-line"></span>
+        </div>
+        <div class="form-row" style="margin-top: 20px;">
+            <label for="handtekening">Handtekening:</label>
+            <span class="signature-line"></span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Door ondertekening van dit formulier ga je akkoord met de algemene voorwaarden van Rijschool Want2Drive.</p>
+        <p>&copy; 2025 Want2Drive - Alle rechten voorbehouden</p>
+    </div>
+</body>
+</html>

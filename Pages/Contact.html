@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Want2Drive</title>
+    <link rel="stylesheet" href="../Assets/Css/MainStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-info {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px var(--shadow-color);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .contact-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px var(--shadow-color);
+        }
+        
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        .contact-info h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 3px;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .contact-info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .contact-icon {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-right: 1.5rem;
+            background-color: rgba(67, 97, 238, 0.1);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info-item:hover .contact-icon {
+            background-color: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .map-container {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            margin-top: 2rem;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .form-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+            margin-top: 1.5rem;
+        }
+        
+        .reset-btn {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .reset-btn:hover {
+            background-color: #5a6268;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <a href="../index.html" class="logo">Want2Drive</a>
+            <button id="mobileMenuBtn" class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="Rijvanaf.html" class="nav-link">Rijles vanaf 16,5</a></li>
+                <li class="nav-item"><a href="Prijs.html" class="nav-link">Inschrijving en Prijzen</a></li>
+                <li class="nav-item"><a href="Rijschool.html" class="nav-link">Rijschoolmachtiging</a></li>
+                <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <button id="themeToggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero contact-hero">
+        <div class="container hero-content">
+            <h1>Contact</h1>
+            <p>Neem contact met ons op voor meer informatie of om je aan te melden</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2 class="section-title">Stuur ons een bericht</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Naam</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Telefoonnummer</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Onderwerp</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Bericht</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="reset-btn">Wis</button>
+                            <button type="submit" class="submit-btn">Verstuur</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h2 class="section-title">Contact Informatie</h2>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h4>Locatie</h4>
+                            <p>Helmond, Nederland</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h4>Telefoon</h4>
+                            <p>+31 (0)6 81470255</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h4>E-mail</h4>
+                            <p>info@want2drive.nl</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h4>Openingstijden</h4>
+                            <p>Maandag - Vrijdag: 9:00 - 18:00</p>
+                            <p>Zaterdag: 9:00 - 15:00</p>
+                            <p>Zondag: Gesloten</p>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Volg ons op:</h3>
+                    <div class="social-links" style="display: flex; gap: 1rem;">
+                        <a href="http://www.facebook.com/autorijschoolwant2drive" target="_blank" style="background-color: rgba(67, 97, 238, 0.1); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all 0.3s ease;"><i class="fab fa-facebook" style="font-size: 1.5rem; color: var(--primary-color);"></i></a>
+                        <a href="https://wa.me/0681470255" target="_blank" style="background-color: rgba(67, 97, 238, 0.1); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all 0.3s ease;"><i class="fab fa-whatsapp" style="font-size: 1.5rem; color: var(--primary-color);"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Section -->
+            <div class="map-container">
+                <!-- Placeholder for Google Maps iframe - replace with actual embed code -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39722.48834418034!2d5.6367125!3d51.4826242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c723d00bde6ea7%3A0x400de5a8d1e6bc0!2sHelmond%2C%20Netherlands!5e0!3m2!1sen!2sus!4v1625000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Veelgestelde Vragen</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="feature-title">Hoe kan ik me inschrijven?</h3>
+                    <p>Je kunt je inschrijven door het inschrijfformulier te downloaden op onze <a href="Prijs.html" style="color: var(--primary-color);">Inschrijving en Prijzen</a> pagina, of door contact met ons op te nemen via dit contactformulier.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">Kan ik een proefles nemen?</h3>
+                    <p>Ja, je kunt een proefles nemen voor slechts €15,-. Neem contact met ons op om een afspraak te maken.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">Hoe machtig ik Want2Drive bij het CBR?</h3>
+                    <p>Informatie over het machtigen van Want2Drive vind je op onze <a href="Rijschool.html" style="color: var(--primary-color);">Rijschoolmachting</a> pagina.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>Want2drive</h3>
+                <p>Jonge rijschool gevestigd in Helmond</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigatie</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="Rijvanaf.html">Rijles vanaf 16,5</a></li>
+                    <li><a href="Prijs.html">Inschrijving en Prijzen</a></li>
+                    <li><a href="Rijschool.html">Rijschoolmachtiging</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Waarom Want2drive?</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Jong</a></li>
+                    <li><a href="#">Betrouwbaar</a></li>
+                    <li><a href="#">Op Maat</a></li>
+                    <li><a href="#">Doelgericht</a></li>
+                    <li><a href="#">Efficiënt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Volg ons op</h3>
+                <div class="social-links">
+                    <a href="http://www.facebook.com/autorijschoolwant2drive" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/0681470255" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 Want2drive - Alle rechten voorbehouden</p>
+        </div>
+    </footer>
+
+    <script src="../Assets/Js/MainScript.js"></script>
+</body>
+</html>

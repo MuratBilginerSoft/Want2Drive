@@ -1,0 +1,7 @@
+Bu klasör, Want2Drive web sitesi için gerekli görselleri içerir:
+
+1. driving-lesson.jpg - Ana sayfadaki "Over Want2drive" bölümü için sürüş dersi görseli
+2. young-driver.jpg - "Rijles vanaf 16,5" sayfası için genç sürücü görseli
+3. cbr-machtiging.jpg - "Rijschoolmachting" sayfası için CBR machtiging görseli
+
+Lütfen bu görselleri ekleyin veya uygun alternatiflerle değiştirin.
